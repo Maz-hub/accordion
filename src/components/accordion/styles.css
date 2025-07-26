@@ -11,6 +11,21 @@ body {
     width: 100wh;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.wrapper button {
+    padding: 0.8rem;
+    background: #FD7014;
+    color: #222831;
+    border: none;
+    cursor: pointer;
+}
+
+.wrapper button:hover {
+    background-color: #f88436;
+    transition: 0.7s;
 }
 
 .accordion {

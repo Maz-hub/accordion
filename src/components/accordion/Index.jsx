@@ -15,6 +15,7 @@ export default function Accordion() {
   console.log(selected);
   return (
     <div className="wrapper">
+      <button>Enable Multi Selection</button>
       <div className="accordion">
         {questions && questions.length > 0 ? (
           questions.map((questionItem) => (
