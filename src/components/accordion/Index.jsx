@@ -8,17 +8,27 @@ import questions from "./data";
 export default function Accordion() {
   const [selected, setSelected] = useState(null);
 
-  console.log("rendering ???");
+  function handleSingleSelection(getCurrentID) {
+    // Toggle: close if same item, open if different
+    setSelected(getCurrentID === selected ? null : getCurrentID);
+  }
+  console.log(selected);
   return (
     <div className="wrapper">
       <div className="accordion">
         {questions && questions.length > 0 ? (
           questions.map((questionItem) => (
             <div className="item">
-              <div className="title">
+              <div
+                onClick={() => handleSingleSelection(questionItem.id)}
+                className="title"
+              >
                 <h3>{questionItem.title}</h3>
                 <span>+</span>
               </div>
+              {selected === questionItem.id ? (
+                <div className="content">{questionItem.info}</div>
+              ) : null}
             </div>
           ))
         ) : (
