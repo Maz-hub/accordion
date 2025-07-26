@@ -1,0 +1,45 @@
+body {
+    background-color: #222831;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100wh;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion {
+    width: 30rem;
+}
+
+.item {
+    background: #393E46;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+}
+
+.title {
+    color: #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.content {
+    color: #EEEEEE;
+    height: auto;
+    text-align: justify;
+
+}
+
+.plus {
+    color: #FD7014
+}

@@ -24,7 +24,7 @@ export default function Accordion() {
                 className="title"
               >
                 <h3>{questionItem.title}</h3>
-                <span>+</span>
+                <span className="plus">+</span>
               </div>
               {selected === questionItem.id ? (
                 <div className="content">{questionItem.info}</div>
