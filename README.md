@@ -1,12 +1,39 @@
-# React + Vite
+# React Accordion Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This mini project is an interactive Accordion component built with React. It includes both **single selection** and **multi-selection** modes.
 
-Currently, two official plugins are available:
+I created it to practice core React concepts and understand how to build real UI logic using state and conditional rendering.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🧠 What I Learned
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **How to map over an array of data** to generate dynamic UI
+- **How to track selection** using `useState`, both for a single ID and an array of IDs
+- **How to toggle open/close** behavior by comparing values
+- **How to switch logic** based on mode (single vs. multiple)
+- **Why we copy arrays before updating state** (`[...multiple]`)
+- **How to conditionally render content** based on the selected state
+
+---
+
+## 💡 Project Logic Summary
+
+- The app tracks if we're in **single or multi-select** mode using a `boolean` state.
+- In **single selection mode**, only one accordion item can be open at a time.
+- In **multi-selection mode**, multiple items can be opened or closed independently by tracking a list of IDs.
+- Clicking an accordion title runs a function that either adds or removes the clicked ID from state.
+
+---
+
+## 🛠️ Tech Used
+
+- React (Vite setup)
+- useState hook for local state management
+- Simple CSS for styling
+
+---
+
+## 🎯 Why I Built This
+
+I built this to train my developer brain to think in state logic, handle conditionals, and understand re-rendering. It wasn't easy — the multi-toggle version was a real challenge — but working through it helped me make the logic click (eventually 😅).
